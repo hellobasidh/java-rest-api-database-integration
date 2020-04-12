@@ -1,78 +1,89 @@
 package com.example.restservice.entity;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class PersonData {
 
-    @Id
-    private String personname;
-    private Integer age;
-    private Integer id;
-    private String documentnumber;
-    private String selfimage;
-    private String documentimage;
-    private String email;
+	@Id
+	@NotNull
+	private Long userId;
+	@NotNull
+	private String personName;
+	@NotNull
+	private Integer age;
+	@NotNull
+	private String documentNumber;
+	@NotNull
+	private String selfImage;
+	@NotNull
+	private String documentImage;
+	@NotNull
+	private String emailAddress;
 
-    public String getPersonName() {
-        return personname;
-    }
+	public Long getUserId() {
+		return userId;
+	}
 
-    public void setPersonName(String personname) {
-        this.personname = personname;
-    }
+	public void setUserId(Long userId) {
+		this.userId = userId;
+	}
 
-    public Integer getAge() {
-        return age;
-    }
+	public String getPersonName() {
+		return personName;
+	}
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+	public void setPersonName(String personName) {
+		this.personName = personName;
+	}
 
-    public Integer getId() {
-        return id;
-    }
+	public Integer getAge() {
+		return age;
+	}
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+	public void setAge(Integer age) {
+		this.age = age;
+	}
 
-    public String getDocumentNumber() {
-        return documentnumber;
-    }
+	public String getDocumentNumber() {
+		return documentNumber;
+	}
 
-    public void setDocumentNumber(String documentnumber) {
-        this.documentnumber = documentnumber;
-    }
+	public void setDocumentNumber(String documentNumber) {
+		this.documentNumber = documentNumber;
+	}
 
-    public String getDocumentImage() {
-        return documentimage;
-    }
+	public String getSelfImage() {
+		return selfImage;
+	}
 
-    public void setDocumentImage(String documentimage) {
-        this.documentimage = documentimage;
-    }
+	public void setSelfImage(String selfImage) {
+		this.selfImage = selfImage;
+	}
 
-    public String getSelfImage() {
-        return selfimage;
-    }
+	public String getDocumentImage() {
+		return documentImage;
+	}
 
-    public void setSelfImage(String selfimage) {
-        this.selfimage = selfimage;
-    }
+	public void setDocumentImage(String documentImage) {
+		this.documentImage = documentImage;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getEmailAddress() {
+		return emailAddress;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
 
-    @Override
-    public String toString() {
-        return "Person{" + "name='" + personname + '\'' + ", age='" + age + '\'' + ", document number='" + documentnumber + '\''
-                + ", email='" + email + '\'' + ", Document Image='" + documentimage + '\'' + ", Self Image='" + selfimage + '\'' + '}';
-    }
+	@Override
+	public String toString() {
+		return "PersonData [userId=" + userId + ", personName=" + personName + ", age=" + age + ", documentNumber="
+				+ documentNumber + ", selfImage=" + selfImage + ", documentImage=" + documentImage + ", emailAddress="
+				+ emailAddress + "]";
+	}
+
 }
