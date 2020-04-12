@@ -67,7 +67,7 @@ public class HealthController {
 	}
 
 	@GetMapping("/health/{code}/getAll")
-	@ApiOperation(value = "Get All the Health Records of the users")
+	@ApiOperation(value = "Get All the Health Records of the Users")
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Successfuly sent the health records of all the users"),
 			@ApiResponse(code = 400, message = "Bad Service Request - Invalid input request"),
 			@ApiResponse(code = 401, message = "You are not authorized to use the service"),
